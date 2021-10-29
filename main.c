@@ -1,6 +1,6 @@
 
 //Header files
-#include <stdio.h>
+/*#include <stdio.h>
 
 //Initialize function that converts decimal to binary
 long long ToBinary(int);
@@ -22,7 +22,7 @@ int main() {
     binaryNo = ToBinary(decimalNo);
 
     //print final outcome
-    printf("%s", "Binary = " + binaryNo);
+    printf( "Binary = " +  binaryNo);
 
     return 0;
 }
@@ -45,3 +45,4 @@ long long ToBinary(int decimalNo){
 
     return binaryNo;
 }
+ */
