@@ -1,18 +1,21 @@
 #include <stdio.h>
+//initialize
+static int ToBinary(int);
+static int decimalNo;
+static int rem[10],i;
 
-int ToBinary(int);
-int decimalNo;
-int rem[10],i;
-
-int main(){
-    printf("Enter a decimal number:");
+//Main function
+static int main(){
+    printf("Enter a decimal number:\n");//Take users input
     scanf("%d", &decimalNo);
-    ToBinary(decimalNo);
+    ToBinary(decimalNo);//Pass input to TOBinary function
     printf("Binary:");
-    for(i=i-1;i>=0;i--){printf("%d",rem[i]);}
+    for(i=i-1;i>=0;i--)
+    {printf("%d",rem[i]);}//Print Binary
     return 0;
 }
-int ToBinary(int n){
-    for (i=0;n>0;i++){rem[i] = n%2;n/=2;}
+//Convert to binary and store in array
+static int ToBinary(int num){
+    for (i=0;num>0;i++){rem[i] = num%2;num/=2;}
     return 0;
 }
