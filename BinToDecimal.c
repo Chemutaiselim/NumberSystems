@@ -3,7 +3,7 @@
 
 static int ToDecimal(long long);
 static int rem, decimalNo=0,i;
-int main(){
+static int main(){
     long long binaryNo;
     printf("Enter a binary number:\n");//Take users input
     scanf("%lld", &binaryNo);
