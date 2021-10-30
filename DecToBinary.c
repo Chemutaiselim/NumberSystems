@@ -5,7 +5,7 @@ static int decimalNo;
 static int rem[10],i;
 
 //Main function
-static int main(){
+ int printBinary(){
     printf("Enter a decimal number:\n");//Take users input
     scanf("%d", &decimalNo);
     ToBinary(decimalNo);//Pass input to TOBinary function
