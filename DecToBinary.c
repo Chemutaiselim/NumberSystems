@@ -1,24 +1,18 @@
 #include <stdio.h>
-#include <math.h>
 
-long long ToBinary(int);
+int ToBinary(int);
+int decimalNo;
+int rem[10],i;
+
 int main(){
-    int decimalNo;
     printf("Enter a decimal number:");
     scanf("%d", &decimalNo);
-    int binaryNo = ToBinary(decimalNo);
-    printf("Binary %lld");
+    ToBinary(decimalNo);
+    printf("Binary:");
+    for(i=i-1;i>=0;i--){printf("%d",rem[i]);}
     return 0;
 }
-long long ToBinary(int n){
-
-    long long binaryNo = 0;
-    int rem, i = 1;
-    while (n!=0){
-        rem = n%2;
-        n/=2;
-        binaryNo += rem*i;
-        i*=10;
-    }
-    return binaryNo;
+int ToBinary(int n){
+    for (i=0;n>0;i++){rem[i] = n%2;n/=2;}
+    return 0;
 }
