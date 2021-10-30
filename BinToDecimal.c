@@ -2,23 +2,19 @@
 #include <math.h>
 
 static int ToDecimal(long long);
-
+static int rem, decimalNo=0,i;
 int main(){
-    long long binaryNo;1
+    long long binaryNo;
     printf("Enter a binary number:\n");//Take users input
     scanf("%lld", &binaryNo);
-    printf("Decimal no: %d");
-    return 0;
+    int num =ToDecimal(binaryNo);
+    printf("Decimal no: %d",num);
 }
-int ToDecimal(long long binaryNo){
-    int decimalNo=0,i=0,rem;
-    while (binaryNo!=0){
-        rem = binaryNo%10;
-        binaryNo/=10;
-        decimalNo +=rem * pow(2, i);
-        ++i;
-
-
+static int ToDecimal(long long binaryNo){
+   for (i=0;binaryNo!=0;++i){
+       rem = binaryNo%10;
+       binaryNo=binaryNo/10;
+       decimalNo=decimalNo + (rem)*(pow(2,i));
     }
     return decimalNo;
 }
