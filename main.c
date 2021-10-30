@@ -1,48 +1,20 @@
-
-//Header files
-/*#include <stdio.h>
-
-//Initialize function that converts decimal to binary
-long long ToBinary(int);
-
-//Main function
-int main() {
-
-    //initialize
-    int decimalNo;
-    int binaryNo;
-
-    //Output
-    printf("Enter your No:");
-
-    //Users input
-    scanf("%d", &decimalNo);
-
-    //pass the decimal no to the convert function
-    binaryNo = ToBinary(decimalNo);
-
-    //print final outcome
-    printf( "Binary = " +  binaryNo);
-
+#include <stdio.h>
+static int Num,base,i,rem[10],b;
+int main(){
+  printf("Enter no:\n");
+    scanf("%d", &Num);
+    printf("Select base \n 1 = binary\n 2 = octal;\n 3 = Hexadecimal\n");
+    scanf("%d", &base);
+    printf("Output:");
+    for(i=i-1;i>=0;i--)
+    {printf("%d",rem[i]);}//Print Binary
     return 0;
 }
-
-//function that converts decimal to binary
-long long ToBinary(int decimalNo){
-
-    //initialize
-    long long binaryNo = 0;
-    int remainder = 1;
-    int i = 1;
-
-    //loop
-    while(decimalNo!=0){
-        remainder = decimalNo%2;
-        binaryNo/=2;
-        binaryNo +=remainder*i;
-        i*=10;
-    }
-
-    return binaryNo;
+static int ToBinary(int num){
+    if(base==1){b=2;}
+    else if(base==2){b=8;}
+    else if(base==3){b=16;}
+    else(printf("Enter Valid Value"));
+    for (i=0;num>0;i++){rem[i] = num%b;num/=b;}
+    return 0;
 }
- */
